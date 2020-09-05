@@ -1,0 +1,28 @@
+
+autotool stages:
+	- configure
+	- make
+	- make install
+
+Using autotools:
+	- install automake
+	- install autoconf
+	- install make
+  - install libtool
+
+
+
+Workflow sequence:
+  - create configure.ac
+  - create Makefile.am
+  - create src/Makefile.am
+  - autoreconf --install
+  - ./configure
+  - make
+  - make clean
+  - make dist    (creates a tar gz for distribution)
+  - make clean-local    (removes all autoconf infrastructure)
+
+Reference: 
+1]. https://opensource.com/article/19/7/introduction-gnu-autotools
+2]. https://www.gnu.org/software/automake/manual/automake.html#Hello-World
